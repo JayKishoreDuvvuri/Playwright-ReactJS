@@ -1,0 +1,12 @@
+stages:
+  - test
+
+tests:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.44.1-jammy
+  script:
+    - npm install
+    - npx playwright install webkit
+    - npx playwright install chrome
+    - npx playwright install msedge
+    - npm run test:chrome
