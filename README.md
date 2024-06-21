@@ -42,7 +42,7 @@ Install the dependencies and devDependencies to run the test.
 Clone the repository
 
 ```bash
-git clone https://github.com/JayKishoreDuvvuri/Playwright-JavaScript.git
+git clone https://github.com/JayKishoreDuvvuri/Playwright-ReactJS.git
 ```
 
 Install dependencies
