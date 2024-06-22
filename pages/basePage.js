@@ -63,8 +63,8 @@ class BasePage {
 	}
 
 	async verifyElementAttribute(selector, attribute, value) {
-		const textValue = await this.page.getAttribute(selector, attribute)
-		return expect(textValue.trim()).toBe(value)
+		const getAttribute = await this.page.locator(selector)
+		return expect(getAttribute).toHaveAttribute(attribute, value)
 	}
 
 	async getFirstElementFromTheList(selector) {
