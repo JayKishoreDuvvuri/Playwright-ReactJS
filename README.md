@@ -40,7 +40,8 @@ Install the dependencies and devDependencies to run the test.
 Clone the repository
 
 ```bash
-git clone https://github.com/JayKishoreDuvvuri/Playwright-ReactJS.git
+GitHuB: git clone https://github.com/JayKishoreDuvvuri/Playwright-ReactJS.git
+GitLab: git clone https://gitlab.com/jaykishore96/playwright-reactjs.git (Main Branch)
 ```
 
 Install dependencies
@@ -92,6 +93,8 @@ npm run html-report
 #### GitLab
 
 ```bash
-Repo: https://gitlab.com/jaykishore96/playwright-reactjs.git
+Repo: 
+Main Branch Latest: https://gitlab.com/jaykishore96/playwright-reactjs/-/tree/main
+Master Branch Old: https://gitlab.com/jaykishore96/playwright-reactjs
 Pipelines: https://gitlab.com/jaykishore96/playwright-reactjs/-/pipelines
 ```
