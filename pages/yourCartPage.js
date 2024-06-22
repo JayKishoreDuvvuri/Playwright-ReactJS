@@ -27,7 +27,7 @@ class YourCartPage extends BasePage {
 			productsPagePageObjects.shoppingCartLink,
 			testData.shoppingCartCount
 		)
-	}
+	} 
 
 	async titleVisible() {
 		return await this.isElementVisible(yourCartPagePageObjects.title)
