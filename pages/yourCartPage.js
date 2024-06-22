@@ -1,7 +1,7 @@
 import BasePage from './basePage'
 import fs from 'fs'
-import * as productsPagePageObjects from "../pageobjects/productsPage";
-import * as yourCartPagePageObjects from "../pageobjects/yourCartPage";
+import * as productsPagePageObjects from '../pageobjects/productsPage'
+import * as yourCartPagePageObjects from '../pageobjects/yourCartPage'
 
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`))
 
@@ -11,18 +11,15 @@ class YourCartPage extends BasePage {
 	}
 
 	async verifyLogoVisible() {
-		return await this.isElementVisible(productsPagePageObjects.appLogo, testData.notVisibleText)
+		return await this.isElementVisible(productsPagePageObjects.appLogo)
 	}
 
 	async verifyBurgerMenuButtonVisible() {
-		return await this.isElementVisible(productsPagePageObjects.burgerMenuBtn, testData.notVisibleText)
+		return await this.isElementVisible(productsPagePageObjects.burgerMenuBtn)
 	}
 
 	async shoppingCartLinkVisible() {
-		return await this.isElementVisible(
-			productsPagePageObjects.shoppingCartLink,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(productsPagePageObjects.shoppingCartLink)
 	}
 
 	async shoppingCartCount() {
@@ -33,67 +30,63 @@ class YourCartPage extends BasePage {
 	}
 
 	async titleVisible() {
-		return await this.isElementVisible(yourCartPagePageObjects.title, testData.notVisibleText)
+		return await this.isElementVisible(yourCartPagePageObjects.title)
 	}
 
 	async quantityAndDescriptionLabelVisible() {
-		await this.isElementVisible(yourCartPagePageObjects.cartQuantityLabel, testData.notVisibleText)
+		await this.isElementVisible(yourCartPagePageObjects.cartQuantityLabel)
 		return await this.isElementVisible(
-			yourCartPagePageObjects.cartDescriptionLabel,
-			testData.notVisibleText
+			yourCartPagePageObjects.cartDescriptionLabel
 		)
 	}
 
 	async cartQuantityVisible() {
-		await this.isElementVisible(yourCartPagePageObjects.cartQuantity, testData.notVisibleText)
-		return await this.verifyElementText(yourCartPagePageObjects.cartQuantity, testData.cartQuantity)
+		await this.isElementVisible(yourCartPagePageObjects.cartQuantity)
+		return await this.verifyElementText(
+			yourCartPagePageObjects.cartQuantity,
+			testData.cartQuantity
+		)
 	}
 
 	async itemNameVisible() {
-		return await this.isElementVisible(
-			productsPagePageObjects.fleeceJacketname,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(productsPagePageObjects.fleeceJacketname)
 	}
 
 	async itemTextVisible() {
-		return await this.isElementVisible(
-			yourCartPagePageObjects.flecceJacketText,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(yourCartPagePageObjects.flecceJacketText)
 	}
 
 	async itemPriceVisible() {
 		return await this.isElementVisible(
-			yourCartPagePageObjects.fleeceJacketPrice,
-			testData.notVisibleText
+			yourCartPagePageObjects.fleeceJacketPrice
 		)
 	}
 
 	async continueShoppingBtnIsEnabled() {
 		return await this.isElementEnabled(
-			yourCartPagePageObjects.continueShoppingButton,
-			testData.notEnabledText
+			yourCartPagePageObjects.continueShoppingButton
 		)
 	}
 
 	async removeBtnIsEnabled() {
-		return await this.isElementEnabled(yourCartPagePageObjects.removeButton, testData.notEnabledText)
+		return await this.isElementEnabled(yourCartPagePageObjects.removeButton)
 	}
 
 	async checkoutBtnIsEnabled() {
-		return await this.isElementEnabled(yourCartPagePageObjects.checkoutButton, testData.notEnabledText)
+		return await this.isElementEnabled(yourCartPagePageObjects.checkoutButton)
 	}
 
 	async VerifySocialandFooterLinks() {
-		await this.isElementVisible(productsPagePageObjects.facebookLink, testData.notVisibleText)
-		await this.isElementVisible(productsPagePageObjects.twitterLink, testData.notVisibleText)
-		await this.isElementVisible(productsPagePageObjects.linkedInLink, testData.notVisibleText)
-		await this.isElementVisible(productsPagePageObjects.footerText, testData.notVisibleText)
+		await this.isElementVisible(productsPagePageObjects.facebookLink)
+		await this.isElementVisible(productsPagePageObjects.twitterLink)
+		await this.isElementVisible(productsPagePageObjects.linkedInLink)
+		await this.isElementVisible(productsPagePageObjects.footerText)
 	}
 
 	async clickContinueShoppingBtn() {
-		return await this.waitAndClick(yourCartPagePageObjects.continueShoppingButton)
+		return await this.waitAndClick(
+			yourCartPagePageObjects.continueShoppingButton
+		)
 	}
 
 	async clickCheckoutBtn() {
@@ -102,12 +95,14 @@ class YourCartPage extends BasePage {
 
 	async clickRemoveBtnForItems() {
 		await this.waitAndClick(yourCartPagePageObjects.removeButton)
-		return await this.waitAndClick(yourCartPagePageObjects.removeButtonTshirtRed)
+		return await this.waitAndClick(
+			yourCartPagePageObjects.removeButtonTshirtRed
+		)
 	}
 
 	async cartItemAndQuantityLabelNotVisible() {
-		await this.isElementNotVisible(yourCartPagePageObjects.cartQuantityLabel, testData.notAvailabletext)
-		await this.isElementNotVisible(yourCartPagePageObjects.cartItemLabel, testData.notAvailabletext)
+		await this.isElementNotVisible(yourCartPagePageObjects.cartQuantityLabel)
+		await this.isElementNotVisible(yourCartPagePageObjects.cartItemLabel)
 	}
 }
 export default YourCartPage

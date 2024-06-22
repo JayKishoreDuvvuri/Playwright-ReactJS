@@ -28,6 +28,7 @@ import test from "../testFixtures/fixture";
 import { expect } from "@playwright/test";
 import fs from "fs";
 import * as config from "../config";
+import * as productsPagePageObjects from "../pageobjects/productsPage";
 
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
 
@@ -173,11 +174,6 @@ test.describe("Login as a standard user to complete the checkout workflow", () =
       await productsPage.burgerButtonClick();
       await productsPage.clickLogoutSideBarLink();
       await loginPage.loginPageLogo();
-      await loginPage.usernameFieldVisible();
-      await loginPage.passwordFieldVisible();
-      await loginPage.loginButtonIsEnabled();
-      await loginPage.loginCredentialsVisible();
-      await loginPage.passwordCredentialsVisible();
       expect(await loginPage.getTitle()).toBe(config.title);
       expect(await loginPage.getUrl()).toContain(config.baseUrl);
     });

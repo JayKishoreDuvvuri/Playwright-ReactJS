@@ -13,18 +13,15 @@ class CheckoutOverviewPage extends BasePage {
 	}
 
 	async verifyLogoVisible() {
-		return await this.isElementVisible(productsPageObjects.appLogo, testData.notVisibleText)
+		return await this.isElementVisible(productsPageObjects.appLogo)
 	}
 
 	async verifyBurgerMenuButtonVisible() {
-		return await this.isElementVisible(productsPageObjects.burgerMenuBtn, testData.notVisibleText)
+		return await this.isElementVisible(productsPageObjects.burgerMenuBtn)
 	}
 
 	async shoppingCartLinkVisible() {
-		return await this.isElementVisible(
-			productsPageObjects.shoppingCartLink,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(productsPageObjects.shoppingCartLink)
 	}
 
 	async shoppingCartCount() {
@@ -35,97 +32,99 @@ class CheckoutOverviewPage extends BasePage {
 	}
 
 	async titleVisible() {
-		return await this.isElementVisible(checkoutOverviewPagePageObjects.title, testData.notVisibleText)
+		return await this.isElementVisible(checkoutOverviewPagePageObjects.title)
 	}
 
 	async quantityAndDescriptionLabelVisible() {
-		await this.isElementVisible(yourCartPagePageObjects.cartQuantityLabel, testData.notVisibleText)
+		await this.isElementVisible(yourCartPagePageObjects.cartQuantityLabel)
 		return await this.isElementVisible(
-			yourCartPagePageObjects.cartDescriptionLabel,
-			testData.notVisibleText
+			yourCartPagePageObjects.cartDescriptionLabel
 		)
 	}
 
 	async cartQuantityVisible() {
-		await this.isElementVisible(yourCartPagePageObjects.cartQuantity, testData.notVisibleText)
-		return await this.verifyElementText(yourCartPagePageObjects.cartQuantity, testData.cartQuantity)
+		await this.isElementVisible(yourCartPagePageObjects.cartQuantity)
+		return await this.verifyElementText(
+			yourCartPagePageObjects.cartQuantity,
+			testData.cartQuantity
+		)
 	}
 
 	async itemNameVisible() {
-		return await this.isElementVisible(
-			productsPageObjects.fleeceJacketname,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(productsPageObjects.fleeceJacketname)
 	}
 
 	async itemTextVisible() {
-		return await this.isElementVisible(
-			yourCartPagePageObjects.flecceJacketText,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(yourCartPagePageObjects.flecceJacketText)
 	}
 
 	async itemPriceVisible() {
 		return await this.isElementVisible(
-			yourCartPagePageObjects.fleeceJacketPrice,
-			testData.notVisibleText
+			yourCartPagePageObjects.fleeceJacketPrice
 		)
 	}
 
 	async paymentInformationLabelVisible() {
 		return await this.isElementVisible(
-			checkoutOverviewPagePageObjects.paymentInformationLabel,
-			testData.notVisibleText
+			checkoutOverviewPagePageObjects.paymentInformationLabel
 		)
 	}
 
 	async secureCardInfoVisible() {
-		return await this.isElementVisible(checkoutOverviewPagePageObjects.secureCardInfo, testData.notVisibleText)
+		return await this.isElementVisible(
+			checkoutOverviewPagePageObjects.secureCardInfo
+		)
 	}
 
 	async shippingInformationLabelVisible() {
 		return await this.isElementVisible(
-			checkoutOverviewPagePageObjects.shippingInformationLabel,
-			testData.notVisibleText
+			checkoutOverviewPagePageObjects.shippingInformationLabel
 		)
 	}
 
 	async deliveryMessageVisible() {
-		return await this.isElementVisible(checkoutOverviewPagePageObjects.deliveryMessage, testData.notVisibleText)
+		return await this.isElementVisible(
+			checkoutOverviewPagePageObjects.deliveryMessage
+		)
 	}
 
 	async itemTotalLabelVisible() {
-		return await this.isElementVisible(checkoutOverviewPagePageObjects.itemTotalLabel, testData.notVisibleText)
+		return await this.isElementVisible(
+			checkoutOverviewPagePageObjects.itemTotalLabel
+		)
 	}
 
 	async itemTaxLabelVisible() {
-		return await this.isElementVisible(checkoutOverviewPagePageObjects.itemTaxLabel, testData.notVisibleText)
+		return await this.isElementVisible(
+			checkoutOverviewPagePageObjects.itemTaxLabel
+		)
 	}
 
 	async summaryTotalLabelVisible() {
 		return await this.isElementVisible(
-			checkoutOverviewPagePageObjects.summaryTotalLabel,
-			testData.notVisibleText
+			checkoutOverviewPagePageObjects.summaryTotalLabel
 		)
 	}
 
 	async cancelBtnIsEnabled() {
-		return await this.isElementEnabled(cancelButton, testData.notEnabledText)
+		return await this.isElementEnabled(cancelButton)
 	}
 
 	async finishBtnIsEnabled() {
-		return await this.isElementEnabled(checkoutOverviewPagePageObjects.finishButton, testData.notEnabledText)
+		return await this.isElementEnabled(
+			checkoutOverviewPagePageObjects.finishButton
+		)
 	}
 
 	async VerifySocialandFooterLinks() {
-		await this.isElementVisible(productsPageObjects.facebookLink, testData.notVisibleText)
-		await this.isElementVisible(productsPageObjects.twitterLink, testData.notVisibleText)
-		await this.isElementVisible(productsPageObjects.linkedInLink, testData.notVisibleText)
-		await this.isElementVisible(productsPageObjects.footerText, testData.notVisibleText)
+		await this.isElementVisible(productsPageObjects.facebookLink)
+		await this.isElementVisible(productsPageObjects.twitterLink)
+		await this.isElementVisible(productsPageObjects.linkedInLink)
+		await this.isElementVisible(productsPageObjects.footerText)
 	}
 
 	async clickFinishBtn() {
-		return await this.waitAndClick(checkoutOverviewPagePageObjects.finishButton, testData.notEnabledText)
+		return await this.waitAndClick(checkoutOverviewPagePageObjects.finishButton)
 	}
 }
 export default CheckoutOverviewPage

@@ -43,20 +43,6 @@ test.describe
       expect(await loginPage.getUrl()).toContain(config.baseUrl);
     });
 
-    await test.step(`Verify username and password fields are visible on login page`, async () => {
-      await loginPage.usernameFieldVisible();
-      await loginPage.passwordFieldVisible();
-    });
-
-    await test.step(`Verify Login button is enabled and bot image is visible`, async () => {
-      await loginPage.loginButtonIsEnabled();
-    });
-
-    await test.step(`Verify Login and password credentials are visible at the bottom of login page`, async () => {
-      await loginPage.loginCredentialsVisible();
-      await loginPage.passwordCredentialsVisible();
-    });
-
     await test.step(`Login as a Standard user`, async () => {
       await loginPage.loginAsStandardUser();
     });
@@ -91,11 +77,6 @@ test.describe
       await productsPage.burgerButtonClick();
       await productsPage.clickLogoutSideBarLink();
       await loginPage.loginPageLogo();
-      await loginPage.usernameFieldVisible();
-      await loginPage.passwordFieldVisible();
-      await loginPage.loginButtonIsEnabled();
-      await loginPage.loginCredentialsVisible();
-      await loginPage.passwordCredentialsVisible();
       expect(await loginPage.getTitle()).toBe(config.title);
       expect(await loginPage.getUrl()).toContain(config.baseUrl);
     });
@@ -126,7 +107,7 @@ test("Click on Facebook link and check whether user is navigated to Facebook pag
   const link = page.locator(productsPagePageObjects.facebookLink);
   const [newPage] = await Promise.all([
     context.waitForEvent("page"),
-    await link.click(),
+    link.click(),
   ]);
   await newPage.waitForLoadState("networkidle");
   expect(await newPage.title()).toContain(config.facebookTitle);

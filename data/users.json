@@ -25,8 +25,5 @@
 	"errorMessageFirstName": "Error: First Name is required",
 	"errorMessageLasttName": "Error: Last Name is required",
 	"errorMessagePostalCode": "Error: Postal Code is required",
-	"errorMessageLockedOutUser": "Epic sadface: Sorry, this user has been locked out.",
-	"notEnabledText": "Element Not Enabled. Check Failed!",
-	"notVisibleText": "Element Not Visible. Check Failed!",
-	"notAvailabletext": "Element is visible and available in DOM. Check Failed!"
+	"errorMessageLockedOutUser": "Epic sadface: Sorry, this user has been locked out."
 }

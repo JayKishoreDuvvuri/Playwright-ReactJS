@@ -3,7 +3,6 @@ import fs from 'fs'
 import * as productsPagePageObjects from '../pageobjects/productsPage'
 import * as checkoutYourInformationPagePageObjects from '../pageobjects/checkoutYourInformationPage'
 
-
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`))
 
 class CheckoutYourInformationPage extends BasePage {
@@ -12,22 +11,21 @@ class CheckoutYourInformationPage extends BasePage {
 	}
 
 	async verifyLogoVisible() {
-		return await this.isElementVisible(productsPagePageObjects.appLogo, testData.notVisibleText)
+		return await this.isElementVisible(productsPagePageObjects.appLogo)
 	}
 
 	async titleVisible() {
-		return await this.isElementVisible(checkoutYourInformationPagePageObjects.title, testData.notVisibleText)
+		return await this.isElementVisible(
+			checkoutYourInformationPagePageObjects.title
+		)
 	}
 
 	async verifyBurgerMenuButtonVisible() {
-		return await this.isElementVisible(productsPagePageObjects.burgerMenuBtn, testData.notVisibleText)
+		return await this.isElementVisible(productsPagePageObjects.burgerMenuBtn)
 	}
 
 	async shoppingCartLinkVisible() {
-		return await this.isElementVisible(
-			productsPagePageObjects.shoppingCartLink,
-			testData.notVisibleText
-		)
+		return await this.isElementVisible(productsPagePageObjects.shoppingCartLink)
 	}
 
 	async shoppingCartCount() {
@@ -38,7 +36,9 @@ class CheckoutYourInformationPage extends BasePage {
 	}
 
 	async verifyErrorMessage() {
-		return await this.isElementVisible(checkoutYourInformationPagePageObjects.errorMessage, testData.notVisibleText)
+		return await this.isElementVisible(
+			checkoutYourInformationPagePageObjects.errorMessage
+		)
 	}
 
 	async VerifyTextFirstNameOfErrorMessage() {
@@ -69,40 +69,57 @@ class CheckoutYourInformationPage extends BasePage {
 
 	async typeFirstName() {
 		const firstNameText = await this.getRandomName()
-		return await this.waitAndFill(checkoutYourInformationPagePageObjects.firstName, firstNameText)
+		return await this.waitAndFill(
+			checkoutYourInformationPagePageObjects.firstName,
+			firstNameText
+		)
 	}
 
 	async typeLastName() {
 		const lastNameText = await this.getRandomName()
-		return await this.waitAndFill(checkoutYourInformationPagePageObjects.lastName, lastNameText)
+		return await this.waitAndFill(
+			checkoutYourInformationPagePageObjects.lastName,
+			lastNameText
+		)
 	}
 
 	async typePostalCode() {
 		const postalCodeText = await this.getRandomName()
-		return await this.waitAndFill(checkoutYourInformationPagePageObjects.postalCode, postalCodeText)
+		return await this.waitAndFill(
+			checkoutYourInformationPagePageObjects.postalCode,
+			postalCodeText
+		)
 	}
 
 	async cancelBtnIsEnabled() {
-		return await this.isElementEnabled(checkoutYourInformationPagePageObjects.cancelButton, testData.notEnabledText)
+		return await this.isElementEnabled(
+			checkoutYourInformationPagePageObjects.cancelButton
+		)
 	}
 
 	async clickCancelBtn() {
-		return await this.waitAndClick(checkoutYourInformationPagePageObjects.cancelButton)
+		return await this.waitAndClick(
+			checkoutYourInformationPagePageObjects.cancelButton
+		)
 	}
 
 	async continueBtnIsEnabled() {
-		return await this.isElementEnabled(checkoutYourInformationPagePageObjects.continueButton, testData.notEnabledText)
+		return await this.isElementEnabled(
+			checkoutYourInformationPagePageObjects.continueButton
+		)
 	}
 
 	async VerifySocialandFooterLinks() {
-		await this.isElementVisible(productsPagePageObjects.facebookLink, testData.notVisibleText)
-		await this.isElementVisible(productsPagePageObjects.twitterLink, testData.notVisibleText)
-		await this.isElementVisible(productsPagePageObjects.linkedInLink, testData.notVisibleText)
-		await this.isElementVisible(productsPagePageObjects.footerText, testData.notVisibleText)
+		await this.isElementVisible(productsPagePageObjects.facebookLink)
+		await this.isElementVisible(productsPagePageObjects.twitterLink)
+		await this.isElementVisible(productsPagePageObjects.linkedInLink)
+		await this.isElementVisible(productsPagePageObjects.footerText)
 	}
 
 	async clickContinueBtn() {
-		return await this.waitAndClick(checkoutYourInformationPagePageObjects.continueButton, testData.notEnabledText)
+		return await this.waitAndClick(
+			checkoutYourInformationPagePageObjects.continueButton
+		)
 	}
 }
 export default CheckoutYourInformationPage
