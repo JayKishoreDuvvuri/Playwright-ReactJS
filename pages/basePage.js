@@ -48,7 +48,7 @@ class BasePage {
 	}
 
 	async verifyElementText(selector, text) {
-    const locatorText = await this.page.locator(selector)
+		const locatorText = await this.page.locator(selector)
 		return await expect(locatorText).toHaveText(text)
 	}
 
