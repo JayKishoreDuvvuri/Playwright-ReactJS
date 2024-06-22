@@ -21,95 +21,95 @@ Test test.steps:
 13.	User logout from the application and verify the login page
 */
 
-import test from "../testFixtures/fixture";
-import { expect } from "@playwright/test";
-import fs from "fs";
-import * as loginPageObjects from "../pageobjects/loginPage";
-import * as productsPagePageObjects from "../pageobjects/productsPage";
-import * as config from "../config";
+import test from '../testFixtures/fixture'
+import { expect } from '@playwright/test'
+import fs from 'fs'
+import * as loginPageObjects from '../pageobjects/loginPage'
+import * as productsPagePageObjects from '../pageobjects/productsPage'
+import * as config from '../config'
 
-const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
+const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`))
 
 test.describe
-  .parallel("@smoke: Login as a standard user to verify the products page and logout from the application", () => {
-  test("Login to App as a standard user", async ({
-    loginPage,
-    productsPage,
-  }) => {
-    await test.step(`Open the APP and check logo`, async () => {
-      await loginPage.openApp();
-      await loginPage.loginPageLogo();
-      expect(await loginPage.getTitle()).toBe(config.title);
-      expect(await loginPage.getUrl()).toContain(config.baseUrl);
-    });
+	.parallel('@smoke: Login as a standard user to verify the products page and logout from the application', () => {
+	test('Login to App as a standard user', async ({
+		loginPage,
+		productsPage
+	}) => {
+		await test.step(`Open the APP and check logo`, async () => {
+			await loginPage.openApp()
+			await loginPage.loginPageLogo()
+			expect(await loginPage.getTitle()).toBe(config.title)
+			expect(await loginPage.getUrl()).toContain(config.baseUrl)
+		})
 
-    await test.step(`Login as a Standard user`, async () => {
-      await loginPage.loginAsStandardUser();
-    });
+		await test.step(`Login as a Standard user`, async () => {
+			await loginPage.loginAsStandardUser()
+		})
 
-    await test.step(`Verify the products page sidebar links visible and click on About link to check user is navigated to saucelabs page`, async () => {
-      await productsPage.burgerButtonVisible();
-      await productsPage.burgerButtonClick();
-      await productsPage.allItemsSideBarLink();
-      await productsPage.logoutSideBarLink();
-      await productsPage.resetSideBarLink();
-      await productsPage.burgerCrossButtonVisible();
-      await productsPage.burgerCrossButtonClick();
-    });
+		await test.step(`Verify the products page sidebar links visible and click on About link to check user is navigated to saucelabs page`, async () => {
+			await productsPage.burgerButtonVisible()
+			await productsPage.burgerButtonClick()
+			await productsPage.allItemsSideBarLink()
+			await productsPage.logoutSideBarLink()
+			await productsPage.resetSideBarLink()
+			await productsPage.burgerCrossButtonVisible()
+			await productsPage.burgerCrossButtonClick()
+		})
 
-    await test.step(`Verify Inventory container and the inventory list is visible`, async () => {
-      await productsPage.inventoryContainerVisible();
-      await productsPage.backPackItem();
-      await productsPage.boltTshirtItem();
-      await productsPage.onesieItem();
-      await productsPage.bikeLightItem();
-      await productsPage.fleeceJacketItem();
-      await productsPage.tshirtRedItem();
-    });
+		await test.step(`Verify Inventory container and the inventory list is visible`, async () => {
+			await productsPage.inventoryContainerVisible()
+			await productsPage.backPackItem()
+			await productsPage.boltTshirtItem()
+			await productsPage.onesieItem()
+			await productsPage.bikeLightItem()
+			await productsPage.fleeceJacketItem()
+			await productsPage.tshirtRedItem()
+		})
 
-    await test.step(`Verify the footer text+swag bot footer+social channel links are visible`, async () => {
-      await productsPage.footerTextVisible();
-      await productsPage.socialChannelLinksVisible();
-    });
+		await test.step(`Verify the footer text+swag bot footer+social channel links are visible`, async () => {
+			await productsPage.footerTextVisible()
+			await productsPage.socialChannelLinksVisible()
+		})
 
-    await test.step(`Standard user logout from the application and verify the login page`, async () => {
-      await productsPage.burgerButtonVisible();
-      await productsPage.burgerButtonClick();
-      await productsPage.clickLogoutSideBarLink();
-      await loginPage.loginPageLogo();
-      expect(await loginPage.getTitle()).toBe(config.title);
-      expect(await loginPage.getUrl()).toContain(config.baseUrl);
-    });
-  });
+		await test.step(`Standard user logout from the application and verify the login page`, async () => {
+			await productsPage.burgerButtonVisible()
+			await productsPage.burgerButtonClick()
+			await productsPage.clickLogoutSideBarLink()
+			await loginPage.loginPageLogo()
+			expect(await loginPage.getTitle()).toBe(config.title)
+			expect(await loginPage.getUrl()).toContain(config.baseUrl)
+		})
+	})
 
-  test('Click on the "About" side nav bar link to check whether user is navigated to sauce labs page', async ({
-    loginPage,
-    productsPage,
-  }) => {
-    await test.step(`Verify the products page shopping cart icon and product sort container visible `, async () => {
-      await loginPage.openApp();
-      await loginPage.loginAsStandardUser();
-    });
-  });
-});
+	test('Click on the "About" side nav bar link to check whether user is navigated to sauce labs page', async ({
+		loginPage,
+		productsPage
+	}) => {
+		await test.step(`Verify the products page shopping cart icon and product sort container visible `, async () => {
+			await loginPage.openApp()
+			await loginPage.loginAsStandardUser()
+		})
+	})
+})
 
-test("Click on Facebook link and check whether user is navigated to Facebook page", async ({
-  browser,
+test('Click on Facebook link and check whether user is navigated to Facebook page', async ({
+	browser
 }) => {
-  const context = await browser.newContext();
-  const page = await context.newPage();
+	const context = await browser.newContext()
+	const page = await context.newPage()
 
-  await page.goto(config.baseUrl);
-  await page.fill(loginPageObjects.username, testData.standard_user);
-  await page.fill(loginPageObjects.password, testData.password);
-  await page.click(loginPageObjects.loginButton);
+	await page.goto(config.baseUrl)
+	await page.fill(loginPageObjects.username, testData.standard_user)
+	await page.fill(loginPageObjects.password, testData.password)
+	await page.click(loginPageObjects.loginButton)
 
-  const link = page.locator(productsPagePageObjects.facebookLink);
-  const [newPage] = await Promise.all([
-    context.waitForEvent("page"),
-    link.click(),
-  ]);
-  await newPage.waitForLoadState("networkidle");
-  expect(await newPage.title()).toContain(config.facebookTitle);
-  expect(newPage.url()).toBe(config.facebookUrl);
-});
+	const link = page.locator(productsPagePageObjects.facebookLink)
+	const [newPage] = await Promise.all([
+		context.waitForEvent('page'),
+		link.click()
+	])
+	await newPage.waitForLoadState('networkidle')
+	expect(await newPage.title()).toContain(config.facebookTitle)
+	expect(newPage.url()).toBe(config.facebookUrl)
+})

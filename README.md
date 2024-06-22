@@ -6,10 +6,10 @@ An example project demonstrating automation of playwright tests using page objec
 
 We are using https://www.saucedemo.com/ as the Application Under Test. This App is a **React.js** Frontend
 
-- URL: https://www.saucedemo.com/ 
-- OS : macOS 
+- URL: https://www.saucedemo.com/
+- OS : macOS
 - IDE : Visual Studio Code
- 
+
 #### Scenarios
 
 ```bash
@@ -20,7 +20,7 @@ page and logs out from the application.
 
 Testname: TC_01_productPage.test.js
 ```
- 
+
 ```bash
 Scenario 2: Login as a standard user to complete the checkout workflow
 
@@ -29,8 +29,6 @@ from the application. This is a Happy path test scenario.
 
 Testname: TC_02_checkoutWorkflow.test.js
 ```
-
-
 
 #### Installation
 
@@ -84,7 +82,7 @@ Run tests in Parallel on all browsers (chrome, safari, edge and firefox)
 npm run test  - For tests only on all browsers
 ```
 
-#### Playwright Test Report 
+#### Playwright Test Report
 
 ```bash
 Html-test-report :

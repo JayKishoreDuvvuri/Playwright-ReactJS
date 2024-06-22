@@ -1,34 +1,34 @@
 {
-  "name": "playwright-reactjs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "npx playwright test",
-    "test:smoke": "npx playwright test --grep @smoke --project=Chrome",
-    "test:serial": "npx playwright test --workers=1 --project=Chrome",
-    "test:chrome": "npx playwright test --project=Chrome --reporter=list",
-    "test:edge": "npx playwright test --project=Edge --reporter=list",
-    "test:firefox": "npx playwright test --project=Firefox",
-    "test:safari": "npx playwright test --project=Safari --reporter=list",
-    "test:shard": "npx playwright test TC_01_productPage.test.js --shard=1/2 --project=Chrome",
-    "test:one": "npx playwright test TC_01_productPage.test.js --project=Chrome",
-    "test:two": "npx playwright test TC_02_checkoutWorkflow.test.js  --project=Chrome",
-    "test:record": "npx playwright codegen",
-    "html-report": "npx playwright test --reporter=html && npx playwright show-report",
-    "show-trace": "npx playwright show-trace"
-  },
-  "keywords": [
-    "Plawright",
-    "Test Runner",
-    "Test Automation",
-    "JavaScript"
-  ],
-  "author": "Jay Kishore Duvvuri",
-  "license": "ISC",
-  "dependencies": {
-    "@playwright/test": "^1.44.1",
-    "fs": "^0.0.1-security",
-    "prettier": "^3.3.2"
-  }
+	"name": "playwright-reactjs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "npx playwright test",
+		"test:smoke": "npx playwright test --grep @smoke --project=Chrome",
+		"test:serial": "npx playwright test --workers=1 --project=Chrome",
+		"test:chrome": "npx playwright test --project=Chrome --reporter=list",
+		"test:edge": "npx playwright test --project=Edge --reporter=list",
+		"test:firefox": "npx playwright test --project=Firefox",
+		"test:safari": "npx playwright test --project=Safari --reporter=list",
+		"test:shard": "npx playwright test TC_01_productPage.test.js --shard=1/2 --project=Chrome",
+		"test:one": "npx playwright test TC_01_productPage.test.js --project=Chrome",
+		"test:two": "npx playwright test TC_02_checkoutWorkflow.test.js  --project=Chrome",
+		"test:record": "npx playwright codegen",
+		"html-report": "npx playwright test --reporter=html && npx playwright show-report",
+		"show-trace": "npx playwright show-trace"
+	},
+	"keywords": [
+		"Plawright",
+		"Test Runner",
+		"Test Automation",
+		"JavaScript"
+	],
+	"author": "Jay Kishore Duvvuri",
+	"license": "ISC",
+	"dependencies": {
+		"@playwright/test": "^1.44.1",
+		"fs": "^0.0.1-security",
+		"prettier": "^3.3.2"
+	}
 }

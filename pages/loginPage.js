@@ -1,7 +1,6 @@
 import BasePage from './basePage'
 import fs from 'fs'
 import * as loginPageObjects from '../pageobjects/loginPage'
-import { errorMessage } from '../pageobjects/checkoutYourInformationPage'
 
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`))
 
