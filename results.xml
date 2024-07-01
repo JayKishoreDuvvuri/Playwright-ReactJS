@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.159462">
+<testsuite name="TC_02_checkoutWorkflow.test.js" timestamp="2024-07-01T18:17:09.131Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="4.745" errors="0">
+<testcase name="Login as a standard user to complete the checkout workflow › Login to App as a standard user" classname="TC_02_checkoutWorkflow.test.js" time="4.745">
+</testcase>
+</testsuite>
+</testsuites>
