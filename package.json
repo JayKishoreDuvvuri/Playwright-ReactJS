@@ -7,7 +7,7 @@
 		"test": "npx playwright test",
 		"test:smoke": "npx playwright test --grep @smoke --project=Chrome",
 		"test:serial": "npx playwright test --workers=1 --project=Chrome",
-		"test:chrome": "npx playwright test --project=Chrome --reporter=list",
+		"test:chrome": "npx playwright test --project=Chrome",
 		"test:edge": "npx playwright test --project=Edge --reporter=list",
 		"test:firefox": "npx playwright test --project=Firefox",
 		"test:safari": "npx playwright test --project=Safari --reporter=list",
