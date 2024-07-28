@@ -9,4 +9,4 @@ tests:
     - npx playwright install webkit
     - npx playwright install chrome
     - npx playwright install msedge
-    - npm run test:chrome 
+    - npm run test:chrome

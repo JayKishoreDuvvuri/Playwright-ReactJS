@@ -43,7 +43,7 @@ Clone the repository
 GitHuB: git clone https://github.com/JayKishoreDuvvuri/Playwright-ReactJS.git
 GitLab: git clone https://gitlab.com/jaykishore96/playwright-reactjs.git (Main Branch)
 ```
- 
+
 Install dependencies
 
 ```bash
@@ -93,7 +93,7 @@ npm run html-report
 #### GitLab
 
 ```bash
-Repo: 
+Repo:
 Main Branch Latest: https://gitlab.com/jaykishore96/playwright-reactjs/-/tree/main
 Master Branch Old: https://gitlab.com/jaykishore96/playwright-reactjs
 Pipelines: https://gitlab.com/jaykishore96/playwright-reactjs/-/pipelines

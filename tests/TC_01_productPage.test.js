@@ -98,7 +98,7 @@ test('Click on Facebook link and check whether user is navigated to Facebook pag
 }) => {
 	const context = await browser.newContext()
 	const page = await context.newPage()
- 
+
 	await page.goto(config.baseUrl)
 	await page.fill(loginPageObjects.username, testData.standard_user)
 	await page.fill(loginPageObjects.password, testData.password)
