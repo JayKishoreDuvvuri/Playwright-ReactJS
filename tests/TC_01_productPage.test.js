@@ -5,7 +5,7 @@ Scenario Description:
 User logs into the website and verifies all the elements on the products page and logs out from the application. 
 This is like a Smoke test.
 
-Test test.steps:
+Test Steps:
 1.	User is on the Login Page
 2.	Verify the Logo, title, url, username, password fields, login button, login and password credentials on the login page
 3.	Login as a standard user
