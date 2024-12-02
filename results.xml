@@ -1,14 +1,14 @@
-<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="10.362555">
-<testsuite name="TC_01_productPage.test.js" timestamp="2024-08-26T11:31:42.660Z" hostname="Chrome" tests="3" failures="0" skipped="0" time="21.746" errors="0">
-<testcase name="@smoke: Login as a standard user to verify the products page and logout from the application › Login to App as a standard user" classname="TC_01_productPage.test.js" time="8.111">
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="12.057199">
+<testsuite name="TC_01_productPage.test.js" timestamp="2024-12-02T16:50:22.439Z" hostname="Chrome" tests="3" failures="0" skipped="0" time="25.258" errors="0">
+<testcase name="@smoke: Login as a standard user to verify the products page and logout from the application › Login to App as a standard user" classname="TC_01_productPage.test.js" time="9.272">
 </testcase>
-<testcase name="@smoke: Login as a standard user to verify the products page and logout from the application › Click on the &quot;About&quot; side nav bar link to check whether user is navigated to sauce labs page" classname="TC_01_productPage.test.js" time="6.786">
+<testcase name="@smoke: Login as a standard user to verify the products page and logout from the application › Click on the &quot;About&quot; side nav bar link to check whether user is navigated to sauce labs page" classname="TC_01_productPage.test.js" time="6.452">
 </testcase>
-<testcase name="Click on Facebook link and check whether user is navigated to Facebook page" classname="TC_01_productPage.test.js" time="6.849">
+<testcase name="Click on Facebook link and check whether user is navigated to Facebook page" classname="TC_01_productPage.test.js" time="9.534">
 </testcase>
 </testsuite>
-<testsuite name="TC_02_checkoutWorkflow.test.js" timestamp="2024-08-26T11:31:42.660Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="7.598" errors="0">
-<testcase name="Login as a standard user to complete the checkout workflow › Login to App as a standard user" classname="TC_02_checkoutWorkflow.test.js" time="7.598">
+<testsuite name="TC_02_checkoutWorkflow.test.js" timestamp="2024-12-02T16:50:22.439Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="9.884" errors="0">
+<testcase name="Login as a standard user to complete the checkout workflow › Login to App as a standard user" classname="TC_02_checkoutWorkflow.test.js" time="9.884">
 </testcase>
 </testsuite>
 </testsuites>
