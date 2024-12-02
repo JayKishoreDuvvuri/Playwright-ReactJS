@@ -109,7 +109,7 @@ test('Click on Facebook link and check whether user is navigated to Facebook pag
 		context.waitForEvent('page'),
 		link.click()
 	])
-	await newPage.waitForLoadState('networkidle')
+	await newPage.waitForLoadState('domcontentloaded')
 	expect(await newPage.title()).toContain(config.facebookTitle)
 	expect(newPage.url()).toBe(config.facebookUrl)
 })
