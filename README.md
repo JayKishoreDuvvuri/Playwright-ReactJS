@@ -53,6 +53,13 @@ npx playwright install --with-deps
 
 #### Run application
 
+Run Single tests 
+
+```bash
+npm run test:one - Run only the test TC_01_productPage.test.js 
+npm run test:two - Run only the test TC_02_checkoutWorkflow.test.js 
+```
+
 Run tests in Parallel chrome
 
 ```bash
