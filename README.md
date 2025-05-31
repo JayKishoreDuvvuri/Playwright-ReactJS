@@ -40,7 +40,7 @@ Install the dependencies and devDependencies to run the test.
 Clone the repository
 
 ```bash
-GitHuB: git clone https://github.com/JayKishoreDuvvuri/Playwright-ReactJS.git
+GitHub: git clone https://github.com/JayKishoreDuvvuri/Playwright-ReactJS.git
 GitLab: git clone https://gitlab.com/jaykishore96/playwright-reactjs.git (Main Branch)
 ```
 
