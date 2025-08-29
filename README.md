@@ -8,7 +8,7 @@ We are using https://www.saucedemo.com/ as the Application Under Test. This App 
 
 - URL: https://www.saucedemo.com/
 - OS : macOS
-- IDE : Visual Studio Code
+- IDE : Visual Studio Code 
 
 #### Scenarios
 
